@@ -2,7 +2,7 @@
 
 <br>
 
-![](http://i.imgur.com/iFBKVZI.png)
+![](images/vector.png)
 ##### Source : My own experience and knowledge in college and after reading various online material.
 
 <br>
