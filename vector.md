@@ -1,11 +1,9 @@
-# Introduction to Vectors in C++
+# Introduction to Vectors in C++  
 
-<br>
+![](images/vector.png)  
 
-![](images/vector.png)
-##### Source : My own experience and knowledge in college and after reading various online material.
+**Acknowledgement:** Everything written below is from my own experience in college and after reading various materials. I am neither a professional nor expert, but a student who has great passion for the language. Anyone can open a discussion in the issue section, or a pull request in case something should be modified or added. If you consider my work valuable, a [donation](#donation) is much appreciated.
 
-<br>
 
 ## Table of Contents:
 
@@ -503,7 +501,15 @@ Iterator in Cpp inherits the same logic. With iterators, you won't have to *stor
 **Together, containers, iterators and algorithms are the silver bullet of C++ STL.**
 ----------
 
-## !END OF GUIDES. HAVE FUN WITH VECTORS! 
+### This is the end! :smiley: HAVE FUN WITH VECTORS!
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="donation">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="5ZG5Z47L2ZGYC">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+A beer in your country can buy a meal in mine.
 
 
 ##### Reference for examples :[1](http://www.dreamincode.net/forums/topic/33631-c-vector-tutorial/),[2](http://diendan.congdongcviet.com/threads/t5227::cach-su-dung-vector-danh-cho-newbie-trong-lap-trinh-cpp.cpp),[3](http://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm)
