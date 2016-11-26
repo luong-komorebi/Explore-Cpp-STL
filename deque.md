@@ -60,7 +60,7 @@ As mentioned above, deques are very similar to vectors. Therefore, the operation
 - Deques do not provide the functions for capacity (capacity() and reserve()). 
 - Deques do provide direct functions to insert and to delete the first element (push_front() and pop_front()). 
 
-Please read back the [Vector](vector.md) guide. Here is a neat table including most ( not all ) crucial operations on deque :  
+Please read back the [Vector](vector.md) guide for detailed usage. Here is a neat table including most ( not all ) crucial operations on deque :  
 
 | Operations                  | Result                                                                                             |
 |-----------------------------|----------------------------------------------------------------------------------------------------|
@@ -142,6 +142,7 @@ int main()
     // this code outputs : b c d e 
 }
 ```
+
 ----------
 ### This is the end! :smiley: HAVE FUN WITH DEQUES!
 <div id='donation'/>

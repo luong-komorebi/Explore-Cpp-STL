@@ -11,6 +11,16 @@
 2. [Isnt vector a data type?](#id-section2)
 3. [How do we use vectors ?](#id-section3)
 4. [Operations on vectors](#id-section4)
+  * [Input](#input)
+  * [Assign](#assign)
+  * [Insert](#insert)
+  * [Comparison Operators](#comparison-operators)
+  * [Size](#size)
+  * [Output](#output)
+  * [Erase](#erase)
+  * [Clear](#clear)
+  * [Resize](#resize)
+  * [Other Good Stuffs](#other-good-stuffs)
 5. [Iterators](#id-section5)
 
 <div id='id-section1'/>
