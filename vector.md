@@ -521,6 +521,7 @@ Element 6: 5
 * **Vector.swap(vector2)** swap the content of two vectors.
 * **Vector.front()** accesses the first element.
 * **Vector.back()** accesses the last element.
+* **Vector.max_size()** returns how many elements the vector can contain.
 * **Vector.capacity()** returns the number of elements that the vector can hold before more space is allocated. It is very important to remember here that, unlike raw arrays, most of the memory management for vectors is performed silently during construction or manipulation of the container. The **reserve()** method only allocates memory, but leaves it uninitialized. It only affects **capacity()**, but **size()** will be unchanged. 
 Consider this : 
 
@@ -606,6 +607,3 @@ Iterator in Cpp inherits the same logic. With iterators, you won't have to *stor
 <div id='donation'/>
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5ZG5Z47L2ZGYC)
 A beer in your country can buy a meal in mine.
-
-
-##### Reference for examples :[1](http://www.dreamincode.net/forums/topic/33631-c-vector-tutorial/),[2](http://diendan.congdongcviet.com/threads/t5227::cach-su-dung-vector-danh-cho-newbie-trong-lap-trinh-cpp.cpp),[3](http://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm)

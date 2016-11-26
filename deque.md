@@ -83,3 +83,68 @@ Please read back the [Vector](vector.md) guide. Here is a neat table including m
 | a.shrink_to_fit()           | Requests the container to reduce its memory usage to fit its size.                                 |
 | a.resize()                  | Resize the deque ( by adding or destroying elements)                                               |
 
+
+Because push_front and pop_front is unique to deque, let us take an example to see how it works. 
+
+* push_front  
+
+```cpp
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main()
+{
+    deque<char> myDeque;
+    // create deque
+    for(int i = 0 ; i<4; i++) {
+        myDeque.push_back('B'+i ) ; // B C D E
+    }
+
+    // insert A into the head of deque
+    myDeque.push_front('A');
+
+    // print deque
+    deque<char>::iterator it;
+    for( it =myDeque.begin()  ; it!=myDeque.end(); it++) {
+       cout<<*it<<" " ;
+    }
+    return 0;
+
+    // this code outputs : A B C D E
+}
+```
+
+* pop_front  
+
+```cpp
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main()
+{
+    deque<char> myDeque;
+    // create deque
+    for(int i = 0 ; i<5; i++) {
+        myDeque.push_back('a'+i ) ; // a b c d e
+    }
+
+    // remove a out of deque
+    myDeque.pop_front();
+    // print deque
+    deque<char>::iterator it;
+    for( it=myDeque.begin()  ; it!=myDeque.end(); it++) {
+       cout<<*it<<" " ;
+    }
+
+    return 0;
+    // this code outputs : b c d e 
+}
+```
+----------
+### This is the end! :smiley: HAVE FUN WITH DEQUES!
+<div id='donation'/>
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5ZG5Z47L2ZGYC)
+A beer in your country can buy a meal in mine.
+
