@@ -11,6 +11,8 @@
 2. [Isnt vector a data type?](#id-section2)
 3. [How do we use vectors ?](#id-section3)
 4. [Operations on vectors](#id-section4)
+5. [Iterators](#id-section5)
+
 <div id='id-section1'/>
 
 ## What the heck is Vectors in C++ ? 
@@ -44,20 +46,20 @@ That's a good question! Vectors are meant to be **easy to use** so no worry here
 ```
 and remeber the 
 ```c++
-using namespace std
+using namespace std;
 ```
 because vetor belongs to Standard Template Library.
 
 * Secondly, let's consider the syntax of initializing a vector.
 
 ```c++
-vector<int> A;
+vector<int> A;   //default constructor, construct vector A with no elements inside.
 ```
-Easily guess that one out , the code follows this rule : vector<data_type> variable_name.
+Easily guess that one out , the code follows this rule : vector<data_type> vector_name.
 
-Vector doesnt require you to add the size of the data (it's dynamic).But if you'd like to, -> **vector<data_type> variable_name (number_of_elements)**.
+Vector doesnt require you to add the size of the data (it's dynamic).But if you'd like to, -> **vector<data_type> vector_name (number_of_elements)**.
 
-Oh, and if you'd like the intial vector to store something, you are welcome to add in -> **vector<data_type> variable_name  (number_of_elements , something_to_fulfill)**
+Oh, and if you'd like the intial vector to store something, you are welcome to add in -> **vector<data_type> vector_name  (number_of_elements , something_to_fulfill)**
 
 For example :
 
@@ -199,6 +201,103 @@ Employee #2: $258.75
 Employee #3: $1019.25
 Press any key to continue . . .
 ```
+
+### Assign 
+
+Another way to input data into vector is using the `assign()` function.  
+As its name suggests, this function assigns values to the vector. In fact, there are two versions of the assign() function : 
+* The first version takes 2 [iterators](#id-section5) as parameters. 
+* The second version takes 1 integer ( as the size you want ) and another data type as default input. 
+
+For instance : 
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std; 
+
+int main ()
+{
+  vector<int> demo1;
+  vector<int> demo2;
+  vector<int> demo3;
+
+  demo1.assign (10,68);             // assign 10 elements, each equals to 68
+
+  vector<int>::iterator it;
+  it = demo1.begin()+1;             // call an iterator to the second position of demo1
+
+  demo2.assign (it,demo1.end());  // assign demo2 with 9 elements, each element equals to its counter part in demo1 , which is 68
+
+  int arrayDemo[] = {1,2,3,4};
+  demo3.assign (arrayDemo,arrayDemo+4);   // assigning elements using array.
+
+  return 0;
+} 
+// this code will assign demo1 as {68, 68, 68, 68, 68, 68, 68, 68, 68, 68}
+// demo2 as                       {68, 68, 68, 68, 68, 68, 68, 68, 68}
+// demo3 as                       {1,2,3,4}
+```
+
+### Insert 
+
+There will be cases that you want to insert something in the vector while solving a problem, not assign or input it from the beginning or construction phase. In that case, the insert() operation may come in handy. 
+* Using insert is very simple as you input the position and the value. 
+* You can also input multiple elements (with the same value) at once or copy the input from another container thanks to iterators.  
+
+One thing worth noticing is inserting a single element retains the iterator, so it returns the iterator (it looks like this `iterator insert(iterator position, int value)`)
+Seeing is believing : 
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std; 
+
+int main ()
+{
+  vector<int> myvector (2,100);   // construct a vector with 2 elements 100.
+  vector<int>::iterator it;
+  it = myvector.begin();
+
+  //let's go
+  // first style : iterator and value
+  it = myvector.insert ( it , 200 );      // this input 200 at the beginning.  myvector is now {200, 100, 100}
+  // be careful, inputting 1 element with insert() retun an iterator to maintain the validation of that iterator
+  // so here we see this instead of myvector.insert(it, 200) only.
+
+
+
+  // second style :   iterator, number-of-elements, value
+  myvector.insert(it, 2 , 300);    // this input 2 elements 300 at the beginning. my vector is now {300, 300, 200, 100, 100}
+
+  //input more than 1 element makes it no longer valid, which is why we need to construct it again
+  it = myvector.begin();
+
+  // third style : copy data from an array to insert
+  int myarray [] = { 600, 700, 900 };
+  myvector.insert (it, myarray, myarray+3);   // my vector is now {600, 700, 900, 300, 300, 200, 100, 100}
+
+  return 0;
+
+}
+```
+
+### Comparison Operators 
+
+Applying Comparion Operators (such as ==, > , < , != , >= , <= ) on two vectors mean applying them on two vectors' elements. It will return true or false by comparing each pair of elements together. 
+
+```cpp
+int main(){
+    using namespace std;   
+    vector<int> v1{10, 20, 30, 40, 50};
+    vector<int> v2{10, 20, 30, 40, 50};
+
+    if(v1==v2)
+        cout<<"equal";
+    else
+        cout<<"unequal";
+}   // it returns equal 
+``` 
 
 ### Size
 
@@ -454,6 +553,8 @@ The output here is :
 
 Now you see the difference between capacity and size although they seem to be similar to each other.
 ![](https://www.securecoding.cert.org/confluence/download/attachments/20087026/vector-clipped.jpg?version=1&modificationDate=1239994411000&api=v2)
+
+<div id="id-section5"/>
 
 ## Bonus : Iterators 
 
