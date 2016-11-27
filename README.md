@@ -25,6 +25,7 @@ Inside each of the above, there is even more to be considered. This introduction
 ## Index
 Here is what I have covered : 
 * [Vector](vector.md)
+* [Deque](deque.md)
 
 
 ===================
