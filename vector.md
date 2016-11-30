@@ -407,19 +407,33 @@ Press any key to continue . . .
 
 ### Erase
 
-The **Vector.erase(index)** will erase the desired element. For example:
+The **Vector.erase(iterator)** will erase the desired element. However, it needs to be passed in an [iterator](#id-section5) to decide where should erasing happens. For example:
 
-```c++
-vector<int> A(10,5);
-A.erase(3); // will delete element at index 3 ( the fourth element in the vector)
+```cpp
+for (int i=0; i<10; i++) {
+    myvector.push_back(i+1); // 1 2 3 4 5 6 7 8 9 10
+}
+
+  // erase the 6th element
+  myvector.erase (myvector.begin()+5);
+  // this will erase 6 out of the vector.
+
+  // erase the 1st element
+  myvector.erase (myvector.begin());
+  // this will erase 1 out of the vector 
 ```
 
-Or you can delete many elements at once by using **vector.erase(begin, end)**. For example:
+It is also worth noticing that, by passing in 2 iterators, you can erase a range of elements. For example : 
 
-```c++
-vector<int> A(10,5);
-A.erase(3,5); //will delete element at index 3, 4, 5 ( the fourth, fifth, sixth one)
+```cpp
+for (int i=0; i<10; i++) {
+    myvector.push_back(i+1); // 1 2 3 4 5 6 7 8 9 10
+}
+
+myvector.erase(myvector.begin(), myvector.begin()+5); // will delete everything from 1 -> 6
 ```
+
+
 
 ### Clear 
 
