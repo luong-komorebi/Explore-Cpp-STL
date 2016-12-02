@@ -9,7 +9,7 @@
 ## Table of contents:  
 1. [What is deque in C++](#id-section1)  
 2. [Deque vs Vector](#id-section2)
-3. [How do we use Deque](#ud-section3)
+3. [How do we use Deque](#id-section3)
 4. [Operations on Deque](#id-section4)
 
 
@@ -50,6 +50,11 @@ It is very simmilar to vector. The only difference is in the keyword.
 Please read back the [Vector](vector.md) guide. 
 
 ```c++
+#include <deque>
+using namespace std;
+
+[....]
+
 deque<int> A;   // default constructor, construct a deque without elements inside.
 ```
 
