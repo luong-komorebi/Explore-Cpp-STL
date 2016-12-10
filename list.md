@@ -75,7 +75,7 @@ A **list** container manages its element the same way as a **doubly linked list*
 
 When compared with vector and deque, one of the most notable drawback of **list** is that it __doesn't provide random element accessing__ ( index-based access ). For example, navigating to a n-index element requires you to go through n-1 elements via the links. It is surely less efficient, takes linear time, but a natural characteristic sacrifice of **list** since its birth.
 
-_In exchange for the drawbacks, __insertion and removal__ at any position are fast (especially with large data, for more read [here](http://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html)). Thanks to its **linking** nature, the requirement for insertion, for instance, is just editing some links between elements, not moving a bunch of others to make room for new one._   
+*In exchange for the drawbacks, __insertion and removal__ at any position are fast (especially with large data, for more read [here](http://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html)). Thanks to its **linking** nature, the requirement for insertion, for instance, is just editing some links between elements, not moving a bunch of others to make room for new one.*   
 
 `List insertion vs array-like insertion`  
 
