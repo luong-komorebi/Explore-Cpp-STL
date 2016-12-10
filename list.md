@@ -137,7 +137,7 @@ emptyList.back();      // RUNTIME ERROR!
 
 **SOME SPECIAL FUNCTIONS WITH LISTS**  
 
-_This is just a quick preview table. Each of these functions are not easy to apply but handy in some situations. Also, they possess many characteristics that need extra cares. If you are interested, there are other sources that cover these functions in details online.
+_This is just a quick preview table. Each of these functions are not easy to apply but handy in some situations. Also, they possess many characteristics that need extra cares. If you are interested, there are other sources that cover these functions in details online._
 
 | Functions                                                                       	| Meaning                                                      	|
 |---------------------------------------------------------------------------------	|--------------------------------------------------------------	|
