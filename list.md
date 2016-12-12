@@ -86,7 +86,7 @@ When compared with vector and deque, one of the most notable drawback of **list*
 
 ## Operations on list
 
-**List** shares many operations with other sequence containers like **vector** and **deque**. If you are new to STL sequence containers, please read back my [vector](vector.md) to deeply understand these operations. A neat table that summarizes most operations is available in the [deque](deque.md) guide.  
+**List** shares many operations with other sequence containers like **vector** and **deque** (assign, push, pop, insert, erase...). If you are new to STL sequence containers, please read back my [vector](vector.md) to deeply understand these operations. A neat table that summarizes most operations is available in the [deque](deque.md) guide.  
 
 **List**, nevertheless, does differ from the rest in some cases. 
 - It doesn't provide the operator `at()` (*No random accessing, remember?*).  
