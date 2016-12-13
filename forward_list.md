@@ -7,6 +7,7 @@
 > Also, I highly recommend you read vector before this if you are new to C++ STL containers.  
 
 ## Table of contents  
+
 1. [What is forward list](#what-is-forward-list)
 2. [Operations on forward list](#operations-on-forward-list)
 
@@ -21,11 +22,11 @@ Basically, a **forward list** is a **singly linked list**.
 _It stores elements in different storage locations and keep them linked. The difference between **forward list** and **list** is the difference between **singly linked list** and **doubly linked list**. While the latter keeps track of each element's successor and predecessor, the former only cares about the next element. Maintain only one link per element helps reduce memory usage as well as boost the speed of inserting and removing elements (a little bit in some cases - compared to list)._   
 
 ![](images/slvsdl.png)
-However, **forward list** does come with uncomfortable drawbacks. It does share the same drawbacks with **list** (read back, please!). It doesn't provide `size()` operation ([here is why](http://stackoverflow.com/a/31822540)), `push_back()` operation ([here is why](http://stackoverflow.com/a/8742528). Linking in one way makes it difficult to operate element that precedes...   
+However, **forward list** does come with uncomfortable drawbacks. It does share the same drawbacks with **list** (read back, please!). It doesn't provide `size()` operation ([here is why](http://stackoverflow.com/a/31822540)), `push_back()` operation ([here is why](http://stackoverflow.com/a/8742528)). Linking in one way makes it difficult to operate element that precedes...   
 
 One of the case where you may consider using **forward_list** instantly is representing adjacency list of a graph. Other cases are where you want the standard **singly linked list** to sit it, but don't want to implement one yourself.
 
-![](iamges/adjacency.png)
+![](images/adjacency.png)
 
 
 ## Operations on forward list
@@ -35,10 +36,11 @@ Here I just highlight some key differences between **forward list** and **list**
 * Forward list  doesn't provide `size()`. Still, `max_size()` is functional. 
 * Forward list doesn't provide `push_back()`.
 * No element can be accessed directly. There is only `front()` which returns the first element.
-* Insertion at any position requires a special function : `insert_after()`.  `erase_after()` is also used to erase elements from a particular position in the forward list.
-* Removal, sort, merge... simmilar to [**list's special function.**](list.md)
+* Elements  can be accessed using ranged-base for loop or iterators.
+* A unique function for insertion is added for forward list : `insert_after()`.  `erase_after()` is also used to erase elements from a particular position in the forward list.
+* Removal, sort, merge... simmilar to [**list's special function.**](list.md#operations-on-list)
 
-Here is an example for `insert_after`. This operation can take in position, values .... as parameters. 
+Here is an example for `insert_after`. This operation can take in position, values .... as parameters and return an iterator. 
 ```cpp
 #include <iostream>
 #include <vector>
@@ -50,13 +52,13 @@ int main ()
   forward_list<int> mylist;
   forward_list<int>::iterator iter;
 
-  iter = mylist.insert_after ( mylist.before_begin(), 0 );          // insert 0 before begin 
+  iter = mylist.insert_after ( mylist.before_begin(), 0 );          // insert 0 at the beginning 
   cout << "1/ mylist now :";
   for (int& x: mylist) cout << ' ' << x;
   cout << endl;
   
   
-  iter = mylist.insert_after ( iter, 2, 55 );                          //insert 2 elements 55 at the position of iterator 
+  iter = mylist.insert_after ( iter, 2, 55 );                          //insert 2 elements 55 after the position of iterator 
   cout << "2/ mylist now :";
   for (int& x: mylist) cout << ' ' << x;
   cout << endl;
@@ -72,8 +74,12 @@ int main ()
   for (int& x: mylist) cout << ' ' << x;
   cout << endl;
 }
+```
 
+Example for `erase_after` 
+```cpp
 
+```
 /* output : 
 1/ mylist now : 0
 2/ mylist now : 0 55 55
@@ -81,7 +87,7 @@ int main ()
 Finally, mylist now : 0 1 2 3 55 55 29 29 29
 */
 ```
-You can run the code [here](http://cpp.sh/2t4ah).
+You can run the code [here](http://cpp.sh/64ul4).
 
 
 ----------
