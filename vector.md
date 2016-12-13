@@ -8,8 +8,8 @@
 ## Table of Contents:
 
 1. [What the heck is Vectors in C++](#what-the-heck-is-vectors-in-c-)
-2. [Isnt vector a data type?](#isnt-vector-a-data-type)
-3. [How do we use vectors ?](#how-do-we-use-vectors)
+2. [Isnt vector a data type?](#isnt-vector-a-data-type-)
+3. [How do we use vectors ?](#how-do-we-use-vectors-)
 4. [Operations on vectors](#operations-on-vectors)
   * [Input](#input)
   * [Assign](#assign)
@@ -36,7 +36,7 @@ And then born the **Vector** .
 To sum up, vectors are like dynamic array, but much much more powerful and easier to use.
 
 
-## Isn't vector a data type
+## Isn't vector a data type ?
 
 Wait, but I can't `vector + name_of_variable`! That's not a data type?
 
