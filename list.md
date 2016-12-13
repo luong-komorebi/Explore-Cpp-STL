@@ -438,9 +438,9 @@ int main ()
 ```
 *Run this code [here](http://cpp.sh/7zf2).*  
 
-----------
+-------
+_This is the end!_ :smiley: _Have fun!_ :smiley:
 
-### This is the end! :smiley: HAVE FUN WITH LISTS!  
-<div id='donation'/>
+##### Donation
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5ZG5Z47L2ZGYC)
 A beer in your country can buy a meal in mine.

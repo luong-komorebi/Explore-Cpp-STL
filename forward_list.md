@@ -191,11 +191,9 @@ int main ()
 ```
 You can run the code [here](http://cpp.sh/8yuc)
 
-
-
-
 ----------
-### This is the end! :smiley: HAVE FUN WITH FORWARD LISTS!
-<div id='donation'/>
+_This is the end!_ :smiley: _Have fun!_ :smiley:
+
+##### Donation
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5ZG5Z47L2ZGYC)
 A beer in your country can buy a meal in mine.

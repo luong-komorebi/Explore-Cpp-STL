@@ -7,19 +7,18 @@
 > Also, I highly recommend you read vector before this if you are new to C++ STL containers.
 
 ## Table of contents:  
-1. [What is deque in C++](#id-section1)  
-2. [Deque vs Vector](#id-section2)
-3. [How do we use Deque](#id-section3)
-4. [Operations on Deque](#id-section4)
+1. [What is deque in C++](#what-is-deque-in-c)  
+2. [Deque vs Vector](#deque-vs-vector)
+3. [How do we use Deque](#how-do-we-use-deque)
+4. [Operations on Deque](#operations-on-deque)
 
 
-<div id="id-section1"/>  
 ## What is deque in C++  
 
 **Deque** ( pronounced the same as "deck"), is an abbreviation of **double-ended queue** . It is categorized as a sequence container along side with vector, array, list... Actually, **Deque** is a upgraded version of dynamic array, which can be expanded or contracted on both ends.  
 ![](images/deque_description.png)
 
-<div id="id-section2"/>
+
 ## Deque vs Vector
 
 In many cases, deque's behaviour and functionality is simillar to [vector](vector.md)'s. They all manage to hold multiple data elements, automatically handle storage, provide direct random access...  The only operations supplied by vector that deque doesn't have are capacity() and reserve() ( as deque doesnt need this :smile:). However, deep inside, they are very different :   
@@ -42,7 +41,7 @@ _As deleting an element in vector still rooms the space inside the *capacity*._
 
 ###### You shall decide which to use depending on your situation.  
 
-<div id="id-section3"/>
+
 
 ## How do we use deque  
 
@@ -58,7 +57,7 @@ using namespace std;
 deque<int> A;   // default constructor, construct a deque without elements inside.
 ```
 
-<div id="id-section4"/>
+
 ## Operations on deques
 
 As mentioned above, deques are very similar to vectors. Therefore, the operations on both containers are almost indentical, with small specific differences : 
@@ -148,9 +147,11 @@ int main()
 }
 ```
 
-----------
-### This is the end! :smiley: HAVE FUN WITH DEQUES!
-<div id='donation'/>
+---------- 
+
+_This is the end!_ :smiley: _Have fun!_ :smiley:
+
+##### Donation
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5ZG5Z47L2ZGYC)
 A beer in your country can buy a meal in mine.
 

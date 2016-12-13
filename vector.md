@@ -7,10 +7,10 @@
 
 ## Table of Contents:
 
-1. [What the heck is Vectors in C++](#id-section1)
-2. [Isnt vector a data type?](#id-section2)
-3. [How do we use vectors ?](#id-section3)
-4. [Operations on vectors](#id-section4)
+1. [What the heck is Vectors in C++](#what-the-heck-is-vectors-in-c)
+2. [Isnt vector a data type?](#isnt-vector-a-data-type)
+3. [How do we use vectors ?](#how-do-we-use-vectors)
+4. [Operations on vectors](#operations-on-vectors)
   * [Input](#input)
   * [Assign](#assign)
   * [Insert](#insert)
@@ -21,9 +21,9 @@
   * [Clear](#clear)
   * [Resize](#resize)
   * [Other Good Stuffs](#other-good-stuffs)
-5. [Iterators](#id-section5)
+5. [Iterators](#iterators)
 
-<div id='id-section1'/>
+
 
 ## What the heck is Vectors in C++ ? 
 
@@ -34,7 +34,7 @@ Now, they want something **standardized**, **easy to use** yet **perform efficie
 And then born the **Vector** .
 
 To sum up, vectors are like dynamic array, but much much more powerful and easier to use.
-<div id='id-section2'/>
+
 
 ## Wait, but I can't "vector + name_of_variable!" That's not a data type?
 
@@ -43,7 +43,7 @@ No. Vector is built in C++ Standard Template Library ( [C++ STL](https://en.wiki
 In short, C++ STL is a powerful library of templates which provides general-purpose templatized classes and functions that implement many popular and commonly used algorithms and data structures like vectors, lists, queues, and stacks (more on these later).
 
 So yeah, now you understand that vector is **standardized** ! And it's much more than a data type.
-<div id='id-section3'/>
+
 
 ## How do we use vectors ?
 
@@ -130,7 +130,7 @@ int main(int argc, char** argv) {
 	return 0; //exit
 }
 ```
-<div id='id-section4'/>
+
 
 ## Operations on vectors
 
@@ -579,7 +579,7 @@ The output here is :
 Now you see the difference between capacity and size although they seem to be similar to each other.
 ![](https://www.securecoding.cert.org/confluence/download/attachments/20087026/vector-clipped.jpg?version=1&modificationDate=1239994411000&api=v2)
 
-<div id="id-section5"/>
+
 
 ## Bonus : Iterators 
 
@@ -616,7 +616,7 @@ for(myIterator = someThing.begin(); myIterator != something.end(); myIntVectorIt
 
 They do the same thing. So why do we use iterators since the first way seems friendlier, easier and more familiar (to beginners) ?  
 
-* Because of __Performance__
+*Because of __Performance__*
 
 Imagine you are standing at the beginning of a train. Your job is to run from the first compartment to the last compartment, to find a passenger A. For a train that has a certain number of compartment, the job is quite easy. But for a extremely long train, counting how many compartments/passengers there are would kill you before you even do the job. Also, sometimes you dont have to reach the end to find the passenger. So why do you have to know how many compartments/passengers there are ? Why dont you just start the job and save the time.   
 
@@ -624,10 +624,13 @@ Imagine you are standing at the beginning of a train. Your job is to run from th
 
 Iterator in Cpp inherits the same logic. With iterators, you won't have to *store the size of the container* (which is a not-always-fast operation)/ For a vector, using index may still be fine ( but not recommended ) - your vector's size may be controllable. But for other containers like list, map, ... iterator is the best choice. It's more generic and plays well with **algorithms**. 
 
-**Together, containers, iterators and algorithms are the silver bullet of C++ STL.**
+Together, **containers, iterators and algorithms** are the silver bullet of C++ STL.
+
 ----------
 
-### This is the end! :smiley: HAVE FUN WITH VECTORS!
-<div id='donation'/>
+
+_This is the end!_ :smiley: _Have fun!_ :smiley:
+
+##### Donation
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5ZG5Z47L2ZGYC)
 A beer in your country can buy a meal in mine.
