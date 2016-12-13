@@ -75,7 +75,15 @@ int main ()
   for (int& x: mylist) cout << ' ' << x;
   cout << endl;
 }
+
+/*output: 
+1/ mylist now : 0
+2/ mylist now : 0 55 55
+3/ mylist now : 0 55 55 29 29 29
+Finally, mylist now : 0 1 2 3 55 55 29 29 29
+*/
 ```
+You can run the code [here](http://cpp.sh/64ul4).  
 
 Example for `erase_after` 
 ```cpp
@@ -112,7 +120,6 @@ int main ()
   cout << endl;
 }
 
-```
 /* output : 
 1/ mylist now : 0
 2/ mylist now : 0 55 55
