@@ -40,6 +40,8 @@ Here I just highlight some key differences between **forward list** and **list**
 * Elements  can be accessed using ranged-base for loop or iterators.
 * A unique function for insertion is added for forward list : `insert_after()`.  `erase_after()` is also used to erase elements from a particular position in the forward list.
 * Removal, sort, merge... simmilar to [**list's special function.**](list.md#operations-on-list)
+* For convenience, forward list offers an iterator `before_begin()` that points to the location before the beginning of the list.  
+* `next()` is also useful in forward list when you want an iterator that points to an advanced position.
 
 Here is an example for `insert_after`. This operation can take in position, values .... as parameters and return an iterator. 
 ```cpp
@@ -50,7 +52,7 @@ using namespace std;
 int main ()
 {
   vector<int> vec(3,29);   // construct a vector with 3 elements 29
-  forward_list<int> mylist;
+  forward_list<int> mylist;  // construct empty forward list
   forward_list<int>::iterator iter;
 
   iter = mylist.insert_after ( mylist.before_begin(), 0 );          // insert 0 at the beginning 
@@ -64,7 +66,7 @@ int main ()
   for (int& x: mylist) cout << ' ' << x;
   cout << endl;
   
-  iter = mylist.insert_after ( iter, vec.begin(), vec.end() );      // insert 3 elements from the array   
+  iter = mylist.insert_after ( iter, vec.begin(), vec.end() );      // insert 3 elements from the vector  
   cout << "3/ mylist now :";
   for (int& x: mylist) cout << ' ' << x;
   cout << endl;
@@ -76,6 +78,7 @@ int main ()
   cout << endl;
 }
 
+
 /*output: 
 1/ mylist now : 0
 2/ mylist now : 0 55 55
@@ -83,9 +86,9 @@ int main ()
 Finally, mylist now : 0 1 2 3 55 55 29 29 29
 */
 ```
-You can run the code [here](http://cpp.sh/64ul4).  
-
-Example for `erase_after` 
+You can run the code [here](http://cpp.sh/3dzyh).  
+****
+Example for `erase_after` : 
 ```cpp
 #include <iostream>
 #include <vector>
@@ -128,6 +131,67 @@ Finally, mylist now : 0 1 2 3 55 55 29 29 29
 */
 ```
 You can run the code [here](http://cpp.sh/64ul4).
+****
+
+Example for `before_begin()` :
+```cpp
+#include <iostream>
+#include <forward_list> // dont forget this
+using namespace std; 
+int main ()
+{
+    forward_list<int> mylist = { 5,6,7,8,9,10 };  // construct a list
+    forward_list<int>::iterator iter;
+    
+    iter = mylist.before_begin();           // will point to the slot before 5.
+    mylist.erase_after(iter);            // will delete 5.
+    mylist.insert_after(iter, 4);           // will insert 4.
+    for (iter = mylist.begin(); iter!= mylist.end(); ++iter) {
+        cout << *iter << " ";
+    }
+    cout << endl;
+}
+
+// output : 4 6 7 8 9 10 
+```
+You can run this code [here](http://cpp.sh/2ifhc)
+****
+Example with `next()` : 
+```cpp
+#include <iostream>
+#include <forward_list> // dont forget this
+#include <iterator>   // next() is a property of iterator library
+
+using namespace std; 
+
+// In this program you will see how next() and insert_after() cooperate
+int main ()
+{
+    forward_list<int> mylist = { 5,6,7,8,10 };  // construct a list
+    forward_list<int>::iterator currentPos;
+    
+    // Let's say you want to insert 9 after 8 before 10
+
+    
+    for ( currentPos = mylist.before_begin(); currentPos != mylist.end(); ++currentPos){
+        if (*next(currentPos) == 10) {
+            mylist.insert_after(currentPos, 9);
+            break;
+        }
+    }
+    
+    for (currentPos = mylist.begin(); currentPos!= mylist.end(); ++currentPos) {
+        cout << *currentPos << " ";
+    }
+    return 0;
+}
+
+
+//output : 5 6 7 8 9 10  
+```
+You can run the code [here](http://cpp.sh/8yuc)
+
+
 
 
 ----------
