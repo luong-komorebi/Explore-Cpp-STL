@@ -7,7 +7,7 @@
 
 ## Table of Contents:
 
-1. [What the heck is Vectors in C++](#what-the-heck-is-vectors-in-c)
+1. [What the heck is Vectors in C++](#what-the-heck-is-vectors-in-c-)
 2. [Isnt vector a data type?](#isnt-vector-a-data-type)
 3. [How do we use vectors ?](#how-do-we-use-vectors)
 4. [Operations on vectors](#operations-on-vectors)
