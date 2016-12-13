@@ -36,7 +36,9 @@ And then born the **Vector** .
 To sum up, vectors are like dynamic array, but much much more powerful and easier to use.
 
 
-## Wait, but I can't "vector + name_of_variable!" That's not a data type?
+## Isn't vector a data type
+
+Wait, but I can't `vector + name_of_variable`! That's not a data type?
 
 No. Vector is built in C++ Standard Template Library ( [C++ STL](https://en.wikipedia.org/wiki/Standard_Template_Library) ).
 
