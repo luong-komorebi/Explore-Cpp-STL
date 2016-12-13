@@ -16,7 +16,8 @@
 
 To begin with, I thoroughly recommend you to look at [list](list.md). **Forward list** is based on the same concept that **list** is, which is called **linked list**. Inside [list](list.md) guide, I explained meticulously about how a **linked list** works, what it is, what its benefits are and some popular flavours of it.  
 
-![](images/fwlist.png)
+![](images/fwlist.png)  
+
 Basically, a **forward list** is a **singly linked list**.  
 
 _It stores elements in different storage locations and keep them linked. The difference between **forward list** and **list** is the difference between **singly linked list** and **doubly linked list**. While the latter keeps track of each element's successor and predecessor, the former only cares about the next element. Maintain only one link per element helps reduce memory usage as well as boost the speed of inserting and removing elements (a little bit in some cases - compared to list)._   
@@ -78,6 +79,38 @@ int main ()
 
 Example for `erase_after` 
 ```cpp
+#include <iostream>
+#include <vector>
+#include <forward_list> // dont forget this
+using namespace std; 
+int main ()
+{
+  vector<int> vec(3,29);   // construct a vector with 3 elements 29
+  forward_list<int> mylist;
+  forward_list<int>::iterator iter;
+
+  iter = mylist.insert_after ( mylist.before_begin(), 0 );          // insert 0 at the beginning 
+  cout << "1/ mylist now :";
+  for (int& x: mylist) cout << ' ' << x;
+  cout << endl;
+  
+  
+  iter = mylist.insert_after ( iter, 2, 55 );                          //insert 2 elements 55 after the position of iterator 
+  cout << "2/ mylist now :";
+  for (int& x: mylist) cout << ' ' << x;
+  cout << endl;
+  
+  iter = mylist.insert_after ( iter, vec.begin(), vec.end() );      // insert 3 elements from the array   
+  cout << "3/ mylist now :";
+  for (int& x: mylist) cout << ' ' << x;
+  cout << endl;
+  
+  iter = mylist.begin();                                              // reset to begin
+  iter = mylist.insert_after ( iter, {1,2,3} );                        // insert an array afer begin       
+  cout << "Finally, mylist now :";
+  for (int& x: mylist) cout << ' ' << x;
+  cout << endl;
+}
 
 ```
 /* output : 
