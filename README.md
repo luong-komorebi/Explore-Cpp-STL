@@ -24,8 +24,12 @@ Inside each of the above, there is even more to be considered. This introduction
 
 ## Index
 Here is what I have covered : 
-* [Vector](vector.md)
-* [Deque](deque.md)
+* Container
+  * Sequence Container
+    * [Vector](vector.md)
+    * [Deque](deque.md)
+    * [List](list.md)
+    * [Forward List](forward_list.md)
 
 
 ===================
